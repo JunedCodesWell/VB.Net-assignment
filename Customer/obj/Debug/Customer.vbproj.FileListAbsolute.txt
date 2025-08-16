@@ -1,0 +1,13 @@
+D:\New Assignment\Customer\obj\Debug\Customer.vbproj.AssemblyReference.cache
+D:\New Assignment\Customer\obj\Debug\Customer.Resources.resources
+D:\New Assignment\Customer\obj\Debug\Customer.vbproj.GenerateResource.cache
+D:\New Assignment\Customer\obj\Debug\Customer.vbproj.CoreCompileInputs.cache
+D:\New Assignment\Customer\bin\Debug\Customer.exe.config
+D:\New Assignment\Customer\bin\Debug\Customer.exe
+D:\New Assignment\Customer\bin\Debug\Customer.pdb
+D:\New Assignment\Customer\bin\Debug\Customer.xml
+D:\New Assignment\Customer\obj\Debug\Customer.Form1.resources
+D:\New Assignment\Customer\obj\Debug\Customer.exe
+D:\New Assignment\Customer\obj\Debug\Customer.xml
+D:\New Assignment\Customer\obj\Debug\Customer.pdb
+D:\New Assignment\Customer\obj\Debug\Customer.exe.config
