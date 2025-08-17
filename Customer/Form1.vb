@@ -63,7 +63,8 @@
 
     Private Sub Edit_btn_Click(sender As Object, e As EventArgs) Handles Edit_btn.Click
         Dim rc As Integer
-        rc = Me.Cr_ds.customer_table.Rows.Count
+        'rc = Me.Cr_ds.customer_table.Rows.Count
+        rc = Me.Customer_tableDataGridView.SelectedRows.Count
 
         If rc = 0 Then
             MessageBox.Show("please select your record to edit..")
@@ -77,7 +78,7 @@
     Private Sub Delete_btn_Click(sender As Object, e As EventArgs) Handles Delete_btn.Click
 
         Dim rc As Integer
-        rc = Me.Cr_ds.customer_table.Rows.Count
+        rc = Me.Customer_tableDataGridView.SelectedRows.Count
 
         If rc = 0 Then
             MessageBox.Show("please select your record to delete..")

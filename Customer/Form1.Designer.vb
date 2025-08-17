@@ -23,30 +23,33 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Dim IdLabel As System.Windows.Forms.Label
         Dim FirstNameLabel As System.Windows.Forms.Label
         Dim LastNameLabel As System.Windows.Forms.Label
         Dim GenderLabel As System.Windows.Forms.Label
         Dim DateOfBirthLabel As System.Windows.Forms.Label
         Dim AddressLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Cr_ds = New Customer.cr_ds()
         Me.Customer_tableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Customer_tableTableAdapter = New Customer.cr_dsTableAdapters.customer_tableTableAdapter()
         Me.TableAdapterManager = New Customer.cr_dsTableAdapters.TableAdapterManager()
         Me.Customer_tableBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.Customer_tableBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.Customer_tableDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -61,9 +64,6 @@ Partial Class Form1
         Me.DateOfBirthDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.AddressTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.AddNew_btn = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
@@ -89,6 +89,60 @@ Partial Class Form1
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'IdLabel
+        '
+        IdLabel.AutoSize = True
+        IdLabel.Location = New System.Drawing.Point(10, 28)
+        IdLabel.Name = "IdLabel"
+        IdLabel.Size = New System.Drawing.Size(21, 16)
+        IdLabel.TabIndex = 2
+        IdLabel.Text = "Id:"
+        '
+        'FirstNameLabel
+        '
+        FirstNameLabel.AutoSize = True
+        FirstNameLabel.Location = New System.Drawing.Point(10, 56)
+        FirstNameLabel.Name = "FirstNameLabel"
+        FirstNameLabel.Size = New System.Drawing.Size(75, 16)
+        FirstNameLabel.TabIndex = 4
+        FirstNameLabel.Text = "First Name:"
+        '
+        'LastNameLabel
+        '
+        LastNameLabel.AutoSize = True
+        LastNameLabel.Location = New System.Drawing.Point(10, 84)
+        LastNameLabel.Name = "LastNameLabel"
+        LastNameLabel.Size = New System.Drawing.Size(75, 16)
+        LastNameLabel.TabIndex = 6
+        LastNameLabel.Text = "Last Name:"
+        '
+        'GenderLabel
+        '
+        GenderLabel.AutoSize = True
+        GenderLabel.Location = New System.Drawing.Point(10, 112)
+        GenderLabel.Name = "GenderLabel"
+        GenderLabel.Size = New System.Drawing.Size(55, 16)
+        GenderLabel.TabIndex = 8
+        GenderLabel.Text = "Gender:"
+        '
+        'DateOfBirthLabel
+        '
+        DateOfBirthLabel.AutoSize = True
+        DateOfBirthLabel.Location = New System.Drawing.Point(386, 26)
+        DateOfBirthLabel.Name = "DateOfBirthLabel"
+        DateOfBirthLabel.Size = New System.Drawing.Size(84, 16)
+        DateOfBirthLabel.TabIndex = 10
+        DateOfBirthLabel.Text = "Date Of Birth:"
+        '
+        'AddressLabel
+        '
+        AddressLabel.AutoSize = True
+        AddressLabel.Location = New System.Drawing.Point(386, 53)
+        AddressLabel.Name = "AddressLabel"
+        AddressLabel.Size = New System.Drawing.Size(61, 16)
+        AddressLabel.TabIndex = 12
+        AddressLabel.Text = "Address:"
         '
         'Cr_ds
         '
@@ -131,6 +185,29 @@ Partial Class Form1
         Me.Customer_tableBindingNavigator.TabIndex = 0
         Me.Customer_tableBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(92, 55)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(45, 55)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(77, 55)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -164,16 +241,9 @@ Partial Class Form1
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(45, 55)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 58)
         '
         'BindingNavigatorMoveNextItem
@@ -196,24 +266,18 @@ Partial Class Form1
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 58)
         '
-        'BindingNavigatorAddNewItem
+        'ToolStripSeparator1
         '
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(92, 55)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 58)
         '
-        'BindingNavigatorDeleteItem
+        'ToolStripSeparator3
         '
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(77, 55)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 58)
         '
         'Customer_tableBindingNavigatorSaveItem
         '
@@ -221,6 +285,11 @@ Partial Class Form1
         Me.Customer_tableBindingNavigatorSaveItem.Name = "Customer_tableBindingNavigatorSaveItem"
         Me.Customer_tableBindingNavigatorSaveItem.Size = New System.Drawing.Size(100, 55)
         Me.Customer_tableBindingNavigatorSaveItem.Text = "Save Data"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 58)
         '
         'Customer_tableDataGridView
         '
@@ -284,15 +353,6 @@ Partial Class Form1
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.Width = 125
         '
-        'IdLabel
-        '
-        IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(10, 28)
-        IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(21, 16)
-        IdLabel.TabIndex = 2
-        IdLabel.Text = "Id:"
-        '
         'IdTextBox
         '
         Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Customer_tableBindingSource, "Id", True))
@@ -300,15 +360,6 @@ Partial Class Form1
         Me.IdTextBox.Name = "IdTextBox"
         Me.IdTextBox.Size = New System.Drawing.Size(200, 22)
         Me.IdTextBox.TabIndex = 3
-        '
-        'FirstNameLabel
-        '
-        FirstNameLabel.AutoSize = True
-        FirstNameLabel.Location = New System.Drawing.Point(10, 56)
-        FirstNameLabel.Name = "FirstNameLabel"
-        FirstNameLabel.Size = New System.Drawing.Size(75, 16)
-        FirstNameLabel.TabIndex = 4
-        FirstNameLabel.Text = "First Name:"
         '
         'FirstNameTextBox
         '
@@ -318,15 +369,6 @@ Partial Class Form1
         Me.FirstNameTextBox.Size = New System.Drawing.Size(200, 22)
         Me.FirstNameTextBox.TabIndex = 5
         '
-        'LastNameLabel
-        '
-        LastNameLabel.AutoSize = True
-        LastNameLabel.Location = New System.Drawing.Point(10, 84)
-        LastNameLabel.Name = "LastNameLabel"
-        LastNameLabel.Size = New System.Drawing.Size(75, 16)
-        LastNameLabel.TabIndex = 6
-        LastNameLabel.Text = "Last Name:"
-        '
         'LastNameTextBox
         '
         Me.LastNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Customer_tableBindingSource, "LastName", True))
@@ -334,15 +376,6 @@ Partial Class Form1
         Me.LastNameTextBox.Name = "LastNameTextBox"
         Me.LastNameTextBox.Size = New System.Drawing.Size(200, 22)
         Me.LastNameTextBox.TabIndex = 7
-        '
-        'GenderLabel
-        '
-        GenderLabel.AutoSize = True
-        GenderLabel.Location = New System.Drawing.Point(10, 112)
-        GenderLabel.Name = "GenderLabel"
-        GenderLabel.Size = New System.Drawing.Size(55, 16)
-        GenderLabel.TabIndex = 8
-        GenderLabel.Text = "Gender:"
         '
         'GenderTextBox
         '
@@ -352,15 +385,6 @@ Partial Class Form1
         Me.GenderTextBox.Size = New System.Drawing.Size(200, 22)
         Me.GenderTextBox.TabIndex = 9
         '
-        'DateOfBirthLabel
-        '
-        DateOfBirthLabel.AutoSize = True
-        DateOfBirthLabel.Location = New System.Drawing.Point(386, 26)
-        DateOfBirthLabel.Name = "DateOfBirthLabel"
-        DateOfBirthLabel.Size = New System.Drawing.Size(84, 16)
-        DateOfBirthLabel.TabIndex = 10
-        DateOfBirthLabel.Text = "Date Of Birth:"
-        '
         'DateOfBirthDateTimePicker
         '
         Me.DateOfBirthDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.Customer_tableBindingSource, "DateOfBirth", True))
@@ -368,15 +392,6 @@ Partial Class Form1
         Me.DateOfBirthDateTimePicker.Name = "DateOfBirthDateTimePicker"
         Me.DateOfBirthDateTimePicker.Size = New System.Drawing.Size(200, 22)
         Me.DateOfBirthDateTimePicker.TabIndex = 11
-        '
-        'AddressLabel
-        '
-        AddressLabel.AutoSize = True
-        AddressLabel.Location = New System.Drawing.Point(386, 53)
-        AddressLabel.Name = "AddressLabel"
-        AddressLabel.Size = New System.Drawing.Size(61, 16)
-        AddressLabel.TabIndex = 12
-        AddressLabel.Text = "Address:"
         '
         'AddressTextBox
         '
@@ -407,21 +422,6 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 14
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 58)
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 58)
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 58)
         '
         'ToolStrip1
         '
